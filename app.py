@@ -2,8 +2,12 @@
 
 from flask import Flask, jsonify
 import random
+from os import environ
 
 app = Flask(__name__)
+
+port = environ.get('PORT')
+print(f'PORT is set to {port}')
 
 def is_valid_zip(zip_code):
     # Very basic zip code validation
@@ -29,4 +33,4 @@ def get_weather(zip_code):
     return jsonify(response)
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=8080)
+    app.run(debug=True, host='0.0.0.0', port=port)
