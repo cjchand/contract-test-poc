@@ -13,6 +13,8 @@ paths:
         description: The zip code for which to retrieve weather information.
         schema:
           type: string
+          minLength: 5
+          maxLength: 5
     get:
       summary: Get Weather Information
       description: Returns weather information for the specified zip code.
