@@ -1,0 +1,33 @@
+openapi: 3.0.0
+info:
+  title: Simple Weather API
+  version: 1.0.0
+  description: A simple API to get weather information based on zip code.
+
+paths:
+  /api/v1/weather/{zip_code}:
+    parameters:
+      - name: zip_code
+        in: path
+        required: true
+        description: The zip code for which to retrieve weather information.
+        schema:
+          type: string
+    get:
+      summary: Get Weather Information
+      description: Returns weather information for the specified zip code.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              example:
+                zip_code: "12345"
+                high_temp: 85
+                low_temp: 55
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              example:
+                error: "Invalid zip code format"
