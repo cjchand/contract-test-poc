@@ -5,7 +5,6 @@ info:
   description: A simple API to get weather information based on zip code.
 servers:
   - url: https://weather-api-contract-test-b21546a33c5f.herokuapp.com/api/v1
-
 paths:
   /api/v1/weather/{zip_code}:
     get:
@@ -28,7 +27,6 @@ paths:
             application/json:
               example:
                 error: "Invalid zip code format"
-
 components:
   parameters:
     ZipCodeParameter:
