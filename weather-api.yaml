@@ -3,6 +3,8 @@ info:
   title: Simple Weather API
   version: 1.0.0
   description: A simple API to get weather information based on zip code.
+servers:
+  - url: https://weather-api-contract-test-b21546a33c5f.herokuapp.com/api/v1
 
 paths:
   /api/v1/weather/{zip_code}:
