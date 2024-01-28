@@ -6,7 +6,7 @@ info:
 servers:
   - url: https://weather-api-contract-test-b21546a33c5f.herokuapp.com/api/v1
 paths:
-  /api/v1/weather/{zip_code}:
+  /weather/{zip_code}:
     get:
       summary: Get Weather Information
       description: Returns weather information for the specified zip code.
